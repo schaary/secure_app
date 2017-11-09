@@ -1,21 +1,6 @@
-# SecureApp
+# Secure App - use a HTTPS connection with a bare metal elixir app
 
-**TODO: Add description**
+I try to use cowboy and HTTPS with a bare metal elixir app.
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `secure_app` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:secure_app, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/secure_app](https://hexdocs.pm/secure_app).
-
+This could be usefull for a slim rest api - to check something or hack something
+quick.
