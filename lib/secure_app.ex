@@ -1,18 +1,13 @@
 defmodule SecureApp do
-  @moduledoc """
-  Documentation for SecureApp.
-  """
+  use Application
 
-  @doc """
-  Hello world.
+  def start(_type, _args) do
+    children = [
+      Plug.Adapters.Cowboy.child_spec(
+        :http, SecureApp.HelloPlug, [], port: 8080
+      )
+    ]
 
-  ## Examples
-
-      iex> SecureApp.hello
-      :world
-
-  """
-  def hello do
-    :world
+    Supervisor.start_link(children, strategy: :one_for_one)
   end
 end
